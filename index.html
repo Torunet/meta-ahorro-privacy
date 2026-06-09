@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – Meta Ahorro: Finanzas Simples</title>
+  <meta name="description" content="Política de privacidad oficial de Meta Ahorro: Finanzas Simples. Conoce cómo recopilamos, usamos y protegemos tu información personal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-900: #14532d;
+      --bg: #0b1120;
+      --bg-card: #111827;
+      --bg-card2: #1a2236;
+      --border: rgba(74, 222, 128, 0.15);
+      --text: #f0fdf4;
+      --text-muted: #9ca3af;
+      --accent: #4ade80;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-ring {
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+
+    header h1 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #fff 60%, var(--green-400));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header span {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--bg-card2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(34,197,94,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      color: var(--green-400);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 span {
+      background: linear-gradient(135deg, var(--green-400), #86efac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .hero .updated {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-card2);
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toc::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green-500), transparent);
+    }
+
+    .toc h3 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--green-400);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.4rem;
+    }
+
+    .toc li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .toc li a:hover {
+      color: var(--green-400);
+      background: rgba(74, 222, 128, 0.07);
+    }
+
+    .toc li a::before {
+      content: '→';
+      font-size: 0.7rem;
+      opacity: 0.5;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 2.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem 2.25rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+
+    .section:hover { border-color: rgba(74, 222, 128, 0.3); }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: 0.5rem;
+    }
+
+    .section p, .section li {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section ul, .section ol {
+      padding-left: 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .section li { margin-bottom: 0.4rem; }
+
+    .section strong { color: var(--text); font-weight: 600; }
+
+    .section a {
+      color: var(--green-400);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .section a:hover { color: #86efac; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: rgba(74, 222, 128, 0.06);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      border-radius: 0.875rem;
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .highlight strong { color: var(--green-400); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 1.25rem 0;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(22,163,74,0.15), rgba(11,17,32,0));
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      border-radius: 1.25rem;
+      padding: 2rem 2.25rem;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p { color: var(--text-muted); margin-bottom: 1.25rem; }
+
+    .contact-card a.btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.7rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(34,197,94,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-card a.btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(34,197,94,0.45);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer span { color: var(--green-400); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .section { padding: 1.5rem 1.25rem; }
+      .toc { padding: 1.25rem; }
+      header { padding: 0.875rem 1.25rem; }
+      header span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-ring">💰</div>
+  <h1>Meta Ahorro</h1>
+  <span>Política de Privacidad</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">📋 Documento Legal Oficial</div>
+  <h2>Tu privacidad es<br /><span>nuestra prioridad</span></h2>
+  <p>En Meta Ahorro creemos en la transparencia. Aquí te explicamos de forma clara qué información recopilamos y cómo la usamos.</p>
+  <div class="updated">⏱ Última actualización: 9 de junio de 2025</div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h3>Contenido</h3>
+    <ol>
+      <li><a href="#info">Información que recopilamos</a></li>
+      <li><a href="#uso">Uso de la información</a></li>
+      <li><a href="#terceros">Servicios de terceros</a></li>
+      <li><a href="#publicidad">Publicidad</a></li>
+      <li><a href="#compras">Compras dentro de la app</a></li>
+      <li><a href="#almacenamiento">Almacenamiento local</a></li>
+      <li><a href="#menores">Privacidad de menores</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#cambios">Cambios a esta política</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. INFO -->
+  <article class="section" id="info">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2>1. Información que recopilamos</h2>
+    </div>
+    <p>Meta Ahorro recopila únicamente la información necesaria para ofrecerte la mejor experiencia posible en el manejo de tus metas de ahorro. Esto incluye:</p>
+    <ul>
+      <li><strong>Datos de uso:</strong> cómo interactúas con las funciones de la app (pantallas visitadas, botones utilizados, tiempo de sesión).</li>
+      <li><strong>Datos de rendimiento:</strong> errores y fallos de la aplicación para mejorar la estabilidad.</li>
+      <li><strong>Información de dispositivo:</strong> modelo, versión del sistema operativo y configuración regional, usados exclusivamente para optimizar la experiencia.</li>
+      <li><strong>Datos de autenticación:</strong> correo electrónico (si decides crear una cuenta), almacenado de forma segura mediante Firebase Authentication.</li>
+    </ul>
+    <div class="highlight">
+      <strong>Importante:</strong> Nunca recopilamos información financiera real como números de cuenta bancaria, tarjetas de crédito o datos de transacciones bancarias. Las metas y montos de ahorro que registras permanecen en tu dispositivo y en tu cuenta personal de Firestore, a la que solo tú tienes acceso.
+    </div>
+  </article>
+
+  <!-- 2. USO -->
+  <article class="section" id="uso">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <h2>2. Uso de la información</h2>
+    </div>
+    <p>La información recopilada se utiliza exclusivamente para los siguientes fines:</p>
+    <ul>
+      <li>Proveer y mejorar las funcionalidades de la aplicación.</li>
+      <li>Detectar y corregir errores mediante reportes automáticos de fallos.</li>
+      <li>Analizar patrones de uso agregados y anónimos para priorizar el desarrollo de nuevas características.</li>
+      <li>Personalizar tu experiencia dentro de la app.</li>
+      <li>Enviarte notificaciones relevantes sobre tus metas de ahorro (solo si las tienes activadas).</li>
+    </ul>
+    <div class="divider"></div>
+    <p><strong>No vendemos, alquilamos ni compartimos tu información personal</strong> con terceros con fines comerciales propios.</p>
+  </article>
+
+  <!-- 3. TERCEROS -->
+  <article class="section" id="terceros">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h2>3. Servicios de terceros</h2>
+    </div>
+    <p>Meta Ahorro integra los siguientes servicios de terceros, cada uno con su propia política de privacidad:</p>
+    <ul>
+      <li>
+        <strong>Google Firebase</strong> (Authentication, Firestore, Crashlytics, Analytics) — 
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Política de privacidad</a>
+      </li>
+      <li>
+        <strong>Google AdMob</strong> — Plataforma de publicidad móvil — 
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad</a>
+      </li>
+      <li>
+        <strong>Chartboost</strong> — Red de mediación publicitaria — 
+        <a href="https://www.chartboost.com/legal/privacy-policy/" target="_blank" rel="noopener">Política de privacidad</a>
+      </li>
+      <li>
+        <strong>Meta Audience Network</strong> — Red publicitaria de Facebook — 
+        <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de privacidad</a>
+      </li>
+      <li>
+        <strong>Google Play Billing</strong> — Procesamiento de compras in-app — 
+        <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice&ldl=es" target="_blank" rel="noopener">Política de privacidad</a>
+      </li>
+    </ul>
+    <div class="highlight">
+      Estos servicios pueden recopilar ciertos datos de forma automática de acuerdo con sus propias políticas. Te recomendamos revisarlas para un entendimiento completo.
+    </div>
+  </article>
+
+  <!-- 4. PUBLICIDAD -->
+  <article class="section" id="publicidad">
+    <div class="section-header">
+      <div class="section-icon">📢</div>
+      <h2>4. Publicidad</h2>
+    </div>
+    <p>La versión gratuita de Meta Ahorro muestra anuncios a través de <strong>Google AdMob</strong>, <strong>Chartboost</strong> y la red <strong>Meta Audience Network</strong>. Estas plataformas pueden utilizar identificadores del dispositivo y datos de comportamiento para mostrarte anuncios relevantes.</p>
+    <ul>
+      <li>Puedes gestionar tus preferencias publicitarias desde la configuración de tu dispositivo Android en <strong>Configuración → Google → Anuncios</strong>.</li>
+      <li>Puedes optar por "no personalizar anuncios" en cualquier momento desde la configuración de tu dispositivo.</li>
+      <li>La aplicación no muestra publicidad a usuarios que hayan adquirido el plan Premium.</li>
+    </ul>
+  </article>
+
+  <!-- 5. COMPRAS -->
+  <article class="section" id="compras">
+    <div class="section-header">
+      <div class="section-icon">💳</div>
+      <h2>5. Compras dentro de la aplicación</h2>
+    </div>
+    <p>Meta Ahorro ofrece suscripciones y compras únicas a través de <strong>Google Play Billing</strong>. Cuando realizas una compra:</p>
+    <ul>
+      <li>El procesamiento de pago lo gestiona exclusivamente Google Play. Nosotros <strong>nunca tenemos acceso</strong> a tu información de pago (número de tarjeta, datos bancarios, etc.).</li>
+      <li>Únicamente recibimos una confirmación de que la compra fue exitosa para activar las funciones premium correspondientes.</li>
+      <li>Para gestionar, cancelar o solicitar reembolso de una suscripción, hazlo desde la configuración de Google Play en tu dispositivo.</li>
+    </ul>
+  </article>
+
+  <!-- 6. ALMACENAMIENTO -->
+  <article class="section" id="almacenamiento">
+    <div class="section-header">
+      <div class="section-icon">💾</div>
+      <h2>6. Almacenamiento local de datos</h2>
+    </div>
+    <p>Parte de tus datos (preferencias, configuración de la app) se almacenan localmente en tu dispositivo mediante <strong>AsyncStorage</strong>. Estos datos:</p>
+    <ul>
+      <li>No se transmiten a ningún servidor externo.</li>
+      <li>Se eliminan automáticamente si desinstala la aplicación.</li>
+      <li>Son accesibles solo desde la propia aplicación.</li>
+    </ul>
+    <p style="margin-top: 0.75rem;">Si tienes una cuenta activa, tus metas y datos de ahorro también se sincronizan con <strong>Firebase Firestore</strong> para mantenerlos seguros y disponibles en múltiples dispositivos.</p>
+  </article>
+
+  <!-- 7. MENORES -->
+  <article class="section" id="menores">
+    <div class="section-header">
+      <div class="section-icon">🧒</div>
+      <h2>7. Privacidad de menores</h2>
+    </div>
+    <p>Meta Ahorro <strong>no está diseñada para niños menores de 13 años</strong> y no recopilamos intencionalmente información personal de menores de esa edad.</p>
+    <p style="margin-top: 0.75rem;">Si eres padre, madre o tutor y crees que tu hijo/a nos ha proporcionado información personal sin tu consentimiento, contáctanos de inmediato para eliminar dicha información.</p>
+  </article>
+
+  <!-- 8. DERECHOS -->
+  <article class="section" id="derechos">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>8. Tus derechos</h2>
+    </div>
+    <p>Tienes derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a la información personal que tenemos sobre ti.</li>
+      <li><strong>Corregir</strong> información inexacta.</li>
+      <li><strong>Eliminar</strong> tu cuenta y todos los datos asociados en cualquier momento.</li>
+      <li><strong>Portabilidad</strong> de tus datos en formato legible.</li>
+      <li><strong>Revocar</strong> los permisos de la app (cámara, galería, notificaciones) desde la configuración de tu dispositivo.</li>
+    </ul>
+    <div class="highlight">
+      Para eliminar tu cuenta y todos tus datos, ve a <strong>Configuración → Cuenta → Eliminar cuenta</strong> dentro de la aplicación, o contáctanos directamente al correo que encontrarás en la sección de contacto.
+    </div>
+  </article>
+
+  <!-- 9. CAMBIOS -->
+  <article class="section" id="cambios">
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <h2>9. Cambios a esta política</h2>
+    </div>
+    <p>Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en la aplicación o en la legislación aplicable. Cuando lo hagamos:</p>
+    <ul>
+      <li>Actualizaremos la fecha de "Última actualización" en la parte superior de esta página.</li>
+      <li>Si los cambios son significativos, lo notificaremos dentro de la aplicación.</li>
+    </ul>
+    <p style="margin-top: 0.75rem;">Te recomendamos revisar esta página periódicamente. El uso continuado de la aplicación después de cualquier cambio implica tu aceptación de la política actualizada.</p>
+  </article>
+
+  <!-- 10. CONTACTO -->
+  <div class="contact-card" id="contacto">
+    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✉️</div>
+    <h2>¿Tienes alguna duda?</h2>
+    <p>Si tienes preguntas sobre esta política o sobre el manejo de tus datos, escríbenos. Respondemos en menos de 72 horas.</p>
+    <a href="mailto:vektorstudio.dev@gmail.com" class="btn">vektorstudio.dev@gmail.com</a>
+    <p style="margin-top: 1.25rem; font-size: 0.85rem;">
+      <strong>Desarrollador:</strong> Vektor Studio<br />
+      <strong>Aplicación:</strong> Meta Ahorro: Finanzas Simples<br />
+      <strong>Identificador:</strong> com.vektorstudio.metaahorro
+    </p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Vektor Studio</span> · Meta Ahorro: Finanzas Simples · Todos los derechos reservados.</p>
+  <p style="margin-top: 0.35rem;">Esta política aplica exclusivamente a la aplicación móvil para Android.</p>
+</footer>
+
+</body>
+</html>
